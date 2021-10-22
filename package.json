@@ -1,0 +1,25 @@
+{
+  "name": "cryptodemo",
+  "version": "1.0.0",
+  "description": "demo project",
+  "main": "app.js",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "axios": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimishah514/CRYPTODEMO_SERVICE.git"
+  },
+  "author": "jamal moosvi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimishah514/CRYPTODEMO_SERVICE/issues"
+  },
+  "homepage": "https://github.com/jimishah514/CRYPTODEMO_SERVICE#readme"
+}
