@@ -1,9 +1,10 @@
-const prompt = require("prompt-sync")({ sigint: true });
+
 const https = require('https')
 const axios = require('axios')
 const utility = require('util')
 const process = require('./process')
 const manager = require('./eventManager')
+const promptProcess = require('./processExecutor')
 process.child()
 BTCUSD = 0
 manager.emitter.on('BTCPrice', (BTCPrice) => {
@@ -15,16 +16,22 @@ user2 = "user"
 adminBalance = 100
 userbalance = 10000000
 steric = ""
+promptProcess.prompt()
+manager.emitter.on("prompt",(promptObj) => {
+    console.log("XXX",{promptObj})
+   // promptProcess.prompt()
+})
 //        ######################### MENU START ###############################
-while (1) {
-    console.log(`Admin Balance: ${adminBalance}BTC             User Balance: $${userbalance}`)
-    for (let i = 0; i < 100; i++) steric += "*"
-    console.log(steric)
-    console.log(`Press option 1 for buying (buyer),    Press option 2 for selling (admin)     BTC/USD:$${BTCUSD}`);
-    const option = prompt();
-    console.log(`You have selected option ${option}`);
-    steric = ""
-}
+
+console.log(`Admin Balance: ${adminBalance}BTC             User Balance: $${userbalance}`)
+for (let i = 0; i < 100; i++) steric += "*"
+console.log(steric)
+console.log(`Press option 1 for buying (buyer),    Press option 2 for selling (admin)     BTC/USD:$${BTCUSD}`);
+//console.log(`You have selected option ${option}`);
+steric = ""
+//console.clear()
+
+
  //        ######################### MENU END ###############################
 
 
