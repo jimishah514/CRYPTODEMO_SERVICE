@@ -1,6 +1,6 @@
 # CRYPTODEMO_SERVICE
 
-How to run: <br/><br/>
+How to run: <br/>
 
 1:   npm install<br/>
 2:   npm start<br/>
