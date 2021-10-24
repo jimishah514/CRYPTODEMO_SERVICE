@@ -1,7 +1,10 @@
-const { stdout } = require("process");
-min = 40000
-max = 60000
-function BTCPrice(min, max) {
-    return (Math.random() * (max - min) + min).toFixed(3);
-}
-stdout.write(`${BTCPrice(min,max)}`)
+const axios = require('axios');
+const readline = require('readline');
+let url ='https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT';
+
+let closeInterval = setInterval(()=> {
+    axios.get(url).then(resp => {
+        let BTCPrice = resp.data.price;
+        process.send(JSON.stringify({BTCPrice}))
+    });
+},5000)

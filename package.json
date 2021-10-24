@@ -4,8 +4,8 @@
   "description": "demo project",
   "main": "app.js",
   "dependencies": {
-    "prompt-sync": "^4.2.0",
-    "axios": "^0.23.0"
+    "axios": "^0.23.0",
+    "prompt": "^1.2.0"
   },
   "devDependencies": {},
   "scripts": {
